@@ -55,15 +55,16 @@ body {
 
 #yourChoice {
     color: white;
+    margin-right: 5em;
 }
 
 #results {
     color: #fff;
+    margin-right: 7.2em;
 }
 
-#winner {
+div #winner {
     color: white;
     font-size: 20px;
 }
-
 

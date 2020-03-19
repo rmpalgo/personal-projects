@@ -35,6 +35,7 @@ var compare = function (choice1, choice2) {
     } else if ((choice1 === 1 && choice2 === 0) || (choice1 === 0 && choice2 === 2) || (choice1 === 2 || choice2 === 1)) {
         winner.innerHTML = 'Win';
     } else {
+        //I am using this to find any conditionals that I might be missing.
         winner.innerHTML = "I don't know what happened?";
     }
 };
