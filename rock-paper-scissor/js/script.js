@@ -1,8 +1,24 @@
 "use strict";
 var choice = document.getElementById('yourChoice');
 var results = document.getElementById('results');
-console.log(results.innerHTML);
+var winner = document.getElementById('winner');
 
+var randomNum = function () {
+    var randomHand = Math.floor((Math.random() * 3));
+    if (randomHand === 0) {
+        results.innerHTML = 'rock';
+        compChoice = 0;
+    } else if (randomHand === 1) {
+        results.innerHTML = 'paper';
+        compChoice = 1;
+    } else {
+        results.innerHTML = 'scissors';
+        compChoice = 2;
+    }
+    return;
+}
+
+var compChoice;
 
 /* Ok, I am trying to capture the choices from
 the clicks, but with my limited knowledge of the DOM,
@@ -10,38 +26,48 @@ I'm not too sure how else to do it but use a listener
 and then change the value of var choice to the button
 being clicked on.
 */
-var rock = function (event) {
-    choice.innerHTML = 'rock';
-}
 
-var paper = function (event) {
-    choice.innerHTML = 'paper';
-}
-
-var scissors = function (event) {
-    choice.innerHTML = 'scissors';
-}
-
-var listener = function (event) {
-    var randomHand = Math.floor((Math.random() * 3));
-    if (randomHand === 0) {
-        results.innerHTML = 'Paper';
-    } else if (randomHand === 1) {
-        results.innerHTML = 'Rock';
+//TODO: You just need to figure out the logic to compare choice1 with choice2 and render it to page...
+var compare = function (choice1, choice2) {
+    if (choice1 === choice2) {
+        winner.innerHTML = 'Tie';
     } else {
-        results.innerHTML = 'Scissors';
+        winner.innerHTML = 'IDK';
     }
 }
+
+//0
+var rock = function (event) {
+    randomNum();
+    choice.innerHTML = 'rock';
+    var choice1 = 0;
+    compare(choice1, compChoice);
+}
+
+//1
+var paper = function (event) {
+    randomNum();
+    choice.innerHTML = 'paper';
+    var choice1 = 1;
+    compare(choice1, compChoice);
+}
+
+//2
+var scissors = function (event) {
+    randomNum();
+    choice.innerHTML = 'scissors';
+    var choice1 = 2;
+    compare(choice1, compChoice);
+}
+
+
 
 
 
 
 // register the listener to handle clicks on ROCK
-document.getElementById('rock').addEventListener('click', listener);
 document.getElementById('rock').addEventListener('click', rock)
 // register the listener to handle clicks on PAPER
-document.getElementById('paper').addEventListener('click', listener);
 document.getElementById('paper').addEventListener('click', paper);
 // register the listener to handle clicks on SCISSORS
-document.getElementById('scissors').addEventListener('click', listener);
 document.getElementById('scissors').addEventListener('click', scissors);
