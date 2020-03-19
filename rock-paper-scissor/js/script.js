@@ -15,7 +15,6 @@ var randomNum = function () {
         results.innerHTML = 'scissors';
         compChoice = 2;
     }
-    return;
 }
 
 var compChoice;
