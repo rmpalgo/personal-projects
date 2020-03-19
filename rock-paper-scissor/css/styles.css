@@ -20,13 +20,27 @@ body {
 
 .choices button {
     display: inline-block;
-    padding: 1em 2em;
+    padding: 1em 1em;
     margin: 0 15px;
     background-color: #F3A133;
     font-size: 1.5em;
     border-radius: 5px;
     color: #fff;
 }
+
+#rock i {
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+#paper i {
+    padding-right: 25px;
+}
+
+#scissors i {
+    padding-left: 2px;
+}
+
 
 .container h1  {
     font-family: sans-serif;

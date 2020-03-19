@@ -29,11 +29,11 @@ being clicked on.
 //TODO: You just need to figure out the logic to compare choice1 with choice2 and render it to page...
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) {
-        winner.innerHTML = 'Tie';
+        winner.innerHTML = "It's a tie!";
     } else if ((choice1 === 0 && choice2 === 1) || (choice1 === 1 && choice2 === 2) || (choice1 === 2 && choice2 === 0)) {
-        winner.innerHTML = 'Lose';
+        winner.innerHTML = 'Computer can read your mind, you lose!';
     } else if ((choice1 === 1 && choice2 === 0) || (choice1 === 0 && choice2 === 2) || (choice1 === 2 || choice2 === 1)) {
-        winner.innerHTML = 'Win';
+        winner.innerHTML = 'You alright, you win!';
     } else {
         //I am using this to find any conditionals that I might be missing.
         winner.innerHTML = "I don't know what happened?";
