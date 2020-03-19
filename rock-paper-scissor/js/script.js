@@ -32,7 +32,7 @@ var compare = function (choice1, choice2) {
         winner.innerHTML = 'Tie';
     } else if ((choice1 === 0 && choice2 === 1) || (choice1 === 1 && choice2 === 2) || (choice1 === 2 && choice2 === 0)) {
         winner.innerHTML = 'Lose';
-    } else if ((choice1 === 1 && choice2 === 0) || (choice1 === 0 && choice2 === 2)) {
+    } else if ((choice1 === 1 && choice2 === 0) || (choice1 === 0 && choice2 === 2) || (choice1 === 2 || choice2 === 1)) {
         winner.innerHTML = 'Win';
     } else {
         winner.innerHTML = "I don't know what happened?";
