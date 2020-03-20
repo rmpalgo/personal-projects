@@ -32,7 +32,7 @@ var compare = function (choice1, choice2) {
         winner.innerHTML = "It's a tie!";
     } else if ((choice1 === 0 && choice2 === 1) || (choice1 === 1 && choice2 === 2) || (choice1 === 2 && choice2 === 0)) {
         winner.innerHTML = 'Computer can read your mind, you lose!';
-    } else if ((choice1 === 1 && choice2 === 0) || (choice1 === 0 && choice2 === 2) || (choice1 === 2 || choice2 === 1)) {
+    } else if ((choice1 === 1 && choice2 === 0) || (choice1 === 0 && choice2 === 2) || (choice1 === 2 && choice2 === 1)) {
         winner.innerHTML = 'You alright, you win!';
     } else {
         //I am using this to find any conditionals that I might be missing.
@@ -64,7 +64,11 @@ var scissors = function (event) {
     compare(choice1, compChoice);
 }
 
-
+/**TODO:
+ * Work on the start game button feature to start and restart the game,
+ * also add feature where you can tally the wins and render on page until
+ * new game or restart
+ */
 
 
 
