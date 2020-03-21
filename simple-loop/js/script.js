@@ -22,7 +22,7 @@ function myMove() {
 
 //    This is the function that moves the target animation element
     function frame() {
-        if (xpos > 580) {
+        if (xpos > 580 || ypos > 580) {
             //    when it hits the edge at 850px then clear for now, will
             //    change it later to turn back, and see how I can incorporate loops
             // clearInterval(id);
@@ -44,14 +44,9 @@ function myMove() {
         //so we if we a negative value we can use this as an indicator to
         //go back now I have a working game that goes back and forth woot!
 
-        if (xpos < 0) {
+        if (xpos < 0 || ypos < 0) {
             xincr = 2;
-            if (ypos < 0) {
-                //changing the incr yincr by 1.5 changes directions dy.
-                yincr = 1.5 * xincr;
-            } else if (ypos > 580) {
-                yincr = -2;
-            }
+            yincr = 1.5 * xincr;
         }
     }
 }
