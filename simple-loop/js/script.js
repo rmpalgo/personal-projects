@@ -9,18 +9,18 @@ function myMove() {
     //this will initiate the function frame every second value.
     //the setInterval acts like a loop?...
     var id = setInterval(frame, 10);
-    var pos = 0;
+    var xpos = 0;
+    var ypos = 0;
     var incr = 2;
     //trying to randomize the top direction;
     var random = function () {
-           return (Math.random() * 1);
+           return (Math.random() * .01);
     }
-    var x = 0;
 
 
 //    This is the function that moves the target animation element
     function frame() {
-            if (pos >= 580) {
+            if (xpos >= 580) {
                 //    when it hits the edge at 850px then clear for now, will
                 //    change it later to turn back, and see how I can incorporate loops
                 // clearInterval(id);
@@ -30,16 +30,17 @@ function myMove() {
             } else {
                 //add 1 to pos = 0
                 //keep top at 0, and only move pos x-axis
-                target.style.top =  pos + 'px';
-                target.style.left = pos + 'px';
+                target.style.top = ypos + 'px';
+                target.style.left = xpos + 'px';
             }
             //by using an incr variable you can just change
             //the sign to negative to make it go backwards when
             //it hits the edge of the box
-            pos = pos + incr;
+            xpos = xpos + incr;
+            ypos = ypos + 1;
             //so we if we a negative value we can use this as an indicator to
             //go back now I have a working game that goes back and forth woot!
-            if (pos == -6) {
+            if (xpos == -6) {
                 incr = +2;
             }
     }
