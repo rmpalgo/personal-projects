@@ -10,7 +10,15 @@ function myMove() {
     //the setInterval acts like a loop?...
     var id = setInterval(frame, 10);
     var pos = 0;
-    var incr = 1;
+    var incr = 2;
+    //trying to randomize the top direction;
+    var random = function () {
+       while (true) {
+           return (Math.random() *3);
+       }
+    }
+
+
 //    This is the function that moves the target animation element
     function frame() {
             if (pos >= 580) {
@@ -19,16 +27,21 @@ function myMove() {
                 // clearInterval(id);
                 // instead of clearing to stop why not make it go backwards?
                 //found solution change the sign of the increments
-                incr = -1;
+                incr = -2;
             } else {
                 //add 1 to pos = 0
                 //keep top at 0, and only move pos x-axis
-                target.style.top = 0;
+                target.style.top = pos/(random()) + 'px';
                 target.style.left = pos + 'px';
             }
             //by using an incr variable you can just change
             //the sign to negative to make it go backwards when
             //it hits the edge of the box
             pos = pos + incr;
+            //so we if we a negative value we can use this as an indicator to
+            //go back now I have a working game that goes back and forth woot!
+            if (pos == -6) {
+                incr = +2;
+            }
     }
 }
