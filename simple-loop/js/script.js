@@ -11,6 +11,8 @@ function myMove() {
     var id = setInterval(frame, 10);
     var pos = 0;
     var incr = 1;
+    //add a random denom to change the velocity
+    var randomDenom = (Math.random() * 3);
 //    This is the function that moves the target animation element
     function frame() {
             if (pos >= 580) {
@@ -23,7 +25,7 @@ function myMove() {
             } else {
                 //add 1 to pos = 0
                 //keep top at 0, and only move pos x-axis
-                target.style.top = 0;
+                target.style.top = pos/randomDenom + 'px';
                 target.style.left = pos + 'px';
             }
             //by using an incr variable you can just change
