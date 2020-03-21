@@ -1,0 +1,19 @@
+#box {
+    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    background-color: #1A2027;
+}
+
+p {
+    text-align: center;
+    color: white;
+}
+
+p button {
+    display: inline-block;
+    background-color: #1A2027;
+    color: white;
+    border-radius: 5px;
+    padding: 1em 2em;
+}
