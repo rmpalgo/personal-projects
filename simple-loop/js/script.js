@@ -30,5 +30,10 @@ function myMove() {
             //the sign to negative to make it go backwards when
             //it hits the edge of the box
             pos = pos + incr;
+            //so we if we a negative value we can use this as an indicator to
+            //go back now I have a working game that goes back and forth woot!
+            if (pos == -2) {
+                incr = +1;
+            }
     }
 }
