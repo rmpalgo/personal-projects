@@ -13,10 +13,9 @@ function myMove() {
     var incr = 2;
     //trying to randomize the top direction;
     var random = function () {
-       while (true) {
-           return (Math.random() *3);
-       }
+           return (Math.random() * 1);
     }
+    var x = 0;
 
 
 //    This is the function that moves the target animation element
@@ -31,7 +30,7 @@ function myMove() {
             } else {
                 //add 1 to pos = 0
                 //keep top at 0, and only move pos x-axis
-                target.style.top = pos/(random()) + 'px';
+                target.style.top =  pos + 'px';
                 target.style.left = pos + 'px';
             }
             //by using an incr variable you can just change
