@@ -29,7 +29,7 @@ function myMove() {
                 // instead of clearing to stop why not make it go backwards?
                 //found solution change the sign of the increments
                 xincr = -2;
-                yincr = -2
+                yincr = -2;
             } else {
                 //add 1 to pos = 0
                 //keep top at 0, and only move pos x-axis
@@ -45,8 +45,11 @@ function myMove() {
             //go back now I have a working game that goes back and forth woot!
 
             if (xpos == -6) {
-                xincr = +2;
-                yincr = -2;
+                xincr *= +1;
+                if (ypos == 580)
+                yincr *= -1;
+            } else {
+                yincr *= +1;
             }
     }
 }
