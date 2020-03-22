@@ -1,18 +1,7 @@
 "use strict";
-
 var catTalk = document.getElementById('cat-talk');
 var dogTalk = document.getElementById('dog-talk');
 
-var dogCounter = 0;
-var catCounter = 0;
-
-// function start(event) {(setTimeout (function (event) {
-//         while (dogCounter < 50) {
-//             dogTalk.innerHTML = 'BARK!';
-//             dogCounter++;
-//         }
-//     }, 2000));
-// }
 var elements = document.getElementsByClassName('fa-dog')
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('mouseover', function (event) {
@@ -43,7 +32,37 @@ for (let i = 0; i < elements.length; i++) {
     })
 }
 
+//JUST NEED TO REPEAT FOR CAT
 
+var elementsCat = document.getElementsByClassName('fa-cat')
+for (let i = 0; i < elementsCat.length; i++) {
+    elementsCat[i].addEventListener('mouseover', function (event) {
+        var random = Math.floor(Math.random() *10);
+        if (random === 0) {
+            catTalk.innerHTML = 'MEOW!';
+        } else if (random === 1) {
+            catTalk.innerHTML = 'NO TOUCH!';
+        } else if (random === 2) {
+            catTalk.innerHTML = 'MEOW MEOW';
+        } else if (random === 3) {
+            catTalk.innerHTML = 'MEOW CHICKEN';
+        } else if (random === 4) {
+            catTalk.innerHTML = 'GIVE ME SNACK!';
+        } else if (random === 5) {
+            catTalk.innerHTML = 'I AM A CAT!';
+        } else if (random === 6) {
+            catTalk.innerHTML = 'MEOW MEOW MEOW MEOW';
+        } else if (random === 7) {
+            catTalk.innerHTML = 'GIVE ME CHICKEN';
+        } else if (random === 8) {
+            catTalk.innerHTML = 'PURRRR';
+        } else if (random === 9) {
+            catTalk.innerHTML = 'HELLO, GOOD SIR OR MADAM!';
+        } else if (random === 10) {
+            catTalk.innerHTML = 'NO PET ME';
+        }
+    })
+}
 
 
 
