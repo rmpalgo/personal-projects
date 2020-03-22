@@ -5,7 +5,7 @@ var dogTalk = document.getElementById('dog-talk');
 var elements = document.getElementsByClassName('fa-dog')
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('mouseover', function (event) {
-        var random = Math.floor(Math.random() *10);
+        var random = Math.floor(Math.random() *11);
         if (random === 0) {
             dogTalk.innerHTML = 'BARK!';
         } else if (random === 1) {
@@ -37,7 +37,7 @@ for (let i = 0; i < elements.length; i++) {
 var elementsCat = document.getElementsByClassName('fa-cat')
 for (let i = 0; i < elementsCat.length; i++) {
     elementsCat[i].addEventListener('mouseover', function (event) {
-        var random = Math.floor(Math.random() *10);
+        var random = Math.floor(Math.random() *11);
         if (random === 0) {
             catTalk.innerHTML = 'MEOW!';
         } else if (random === 1) {
