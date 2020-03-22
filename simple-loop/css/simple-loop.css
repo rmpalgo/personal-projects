@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.fas {
+    padding: 0 2em;
+}
+
+.fa-dog {
+    transform: rotateY(180deg);
+}
+
+.message {
+    height:4em;
+    width: 12em;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: black;
+}
+
+#cat-talk {
+    background-color: #FFEF4E;
+    position: absolute;
+    color: black;
+    z-index: 899;
+    top: 91px;
+    left: 401px;
+}
+
+#dog-talk {
+    background-color: #DF741E;
+    position: absolute;
+    color: black;
+    z-index: 900;
+    top: 91px;
+    right: 401px;
+}
+
+.container {
+    margin-top: 10em;
+    display: flex;
+    justify-content: center;
+}

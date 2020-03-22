@@ -11,8 +11,8 @@ function myMove() {
     var id = setInterval(frame, 10);
     var xpos = 0;
     var ypos = 0;
-    var xincr = 2;
-    var yincr = 2;
+    var xincr = 4;
+    var yincr = 4;
 
     //trying to randomize the top direction;
     var random = function () {
