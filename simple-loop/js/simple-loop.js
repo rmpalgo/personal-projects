@@ -3,10 +3,15 @@ var catTalk = document.getElementById('cat-talk');
 var dogTalk = document.getElementById('dog-talk');
 
 var dogSpeak = () => {
+    var random = Math.floor(Math.random() *11);
     let arrTalk = ['BARK', 'NO', 'BARK BARK', 'BARK PORK', 'BARK CHICKEN', 'BARK NO', 'BARK BARK BARK BARK', 'GIVE ME FOOD', 'NO TOUCH', 'HI', 'NO PET'];
-    arrTalk.forEach( (item) => {
-        dogTalk.innerHTML = item;
-    })
+        dogTalk.innerHTML = arrTalk[random];
+};
+
+var catSpeak = () => {
+    var random = Math.floor(Math.random() *11);
+    let arrTalk = ['MEOW', 'NO TOUCH', 'MEOW MEOW', 'MEOW CHICKEN', 'GIVE ME SNACK', 'I AM A CAT', 'GIVE ME CHICKEN', 'MEOW MEOW MEOW MEOW', 'PURRR', 'HELLO SIR OR MADAM', 'NO PET ME'];
+    catTalk.innerHTML = arrTalk[random];
 };
 
 var elements = document.getElementsByClassName('fa-dog')
@@ -46,27 +51,27 @@ for (let i = 0; i < elementsCat.length; i++) {
     elementsCat[i].addEventListener('mouseover', function (event) {
         var random = Math.floor(Math.random() *11);
         if (random === 0) {
-            catTalk.innerHTML = 'MEOW!';
+            catSpeak();
         } else if (random === 1) {
-            catTalk.innerHTML = 'NO TOUCH!';
+            catSpeak();
         } else if (random === 2) {
-            catTalk.innerHTML = 'MEOW MEOW';
+            catSpeak();
         } else if (random === 3) {
-            catTalk.innerHTML = 'MEOW CHICKEN';
+            catSpeak();
         } else if (random === 4) {
-            catTalk.innerHTML = 'GIVE ME SNACK!';
+            catSpeak();
         } else if (random === 5) {
-            catTalk.innerHTML = 'I AM A CAT!';
+            catSpeak();
         } else if (random === 6) {
-            catTalk.innerHTML = 'MEOW MEOW MEOW MEOW';
+            catSpeak();
         } else if (random === 7) {
-            catTalk.innerHTML = 'GIVE ME CHICKEN';
+            catSpeak();
         } else if (random === 8) {
-            catTalk.innerHTML = 'PURRRR';
+            catSpeak();
         } else if (random === 9) {
-            catTalk.innerHTML = 'HELLO, GOOD SIR OR MADAM!';
+            catSpeak();
         } else if (random === 10) {
-            catTalk.innerHTML = 'NO PET ME';
+            catSpeak();
         }
     })
 }
