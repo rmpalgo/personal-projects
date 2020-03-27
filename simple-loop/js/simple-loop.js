@@ -2,32 +2,39 @@
 var catTalk = document.getElementById('cat-talk');
 var dogTalk = document.getElementById('dog-talk');
 
+var dogSpeak = () => {
+    let arrTalk = ['BARK', 'NO', 'BARK BARK', 'BARK PORK', 'BARK CHICKEN', 'BARK NO', 'BARK BARK BARK BARK', 'GIVE ME FOOD', 'NO TOUCH', 'HI', 'NO PET'];
+    arrTalk.forEach( (item) => {
+        dogTalk.innerHTML = item;
+    })
+};
+
 var elements = document.getElementsByClassName('fa-dog')
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('mouseover', function (event) {
         var random = Math.floor(Math.random() *11);
         if (random === 0) {
-            dogTalk.innerHTML = 'BARK!';
+            dogSpeak();
         } else if (random === 1) {
-            dogTalk.innerHTML = 'NO';
+            dogSpeak();
         } else if (random === 2) {
-            dogTalk.innerHTML = 'BARK BARK';
+            dogSpeak();
         } else if (random === 3) {
-            dogTalk.innerHTML = 'BARK PORK';
+            dogSpeak();
         } else if (random === 4) {
-            dogTalk.innerHTML = 'BARK CHICKEN';
+            dogSpeak();
         } else if (random === 5) {
-            dogTalk.innerHTML = 'BARK NO';
+            dogSpeak();
         } else if (random === 6) {
-            dogTalk.innerHTML = 'BARK BARK BARK BARK';
+            dogSpeak();
         } else if (random === 7) {
-            dogTalk.innerHTML = 'GIVE ME FOOD';
+            dogSpeak();
         } else if (random === 8) {
-            dogTalk.innerHTML = 'NO TOUCH';
+            dogSpeak();
         } else if (random === 9) {
-            dogTalk.innerHTML = 'HI';
+            dogSpeak();
         } else if (random === 10) {
-            dogTalk.innerHTML = 'NO PET';
+            dogSpeak();
         }
     })
 }
