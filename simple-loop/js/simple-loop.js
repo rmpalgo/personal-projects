@@ -17,31 +17,8 @@ var catSpeak = () => {
 var elements = document.getElementsByClassName('fa-dog')
 for (let i = 0; i < elements.length; i++) {
     elements[i].addEventListener('mouseover', function (event) {
-        var random = Math.floor(Math.random() *11);
-        if (random === 0) {
-            dogSpeak();
-        } else if (random === 1) {
-            dogSpeak();
-        } else if (random === 2) {
-            dogSpeak();
-        } else if (random === 3) {
-            dogSpeak();
-        } else if (random === 4) {
-            dogSpeak();
-        } else if (random === 5) {
-            dogSpeak();
-        } else if (random === 6) {
-            dogSpeak();
-        } else if (random === 7) {
-            dogSpeak();
-        } else if (random === 8) {
-            dogSpeak();
-        } else if (random === 9) {
-            dogSpeak();
-        } else if (random === 10) {
-            dogSpeak();
-        }
-    })
+        dogSpeak();
+    });
 }
 
 //JUST NEED TO REPEAT FOR CAT
@@ -49,31 +26,8 @@ for (let i = 0; i < elements.length; i++) {
 var elementsCat = document.getElementsByClassName('fa-cat')
 for (let i = 0; i < elementsCat.length; i++) {
     elementsCat[i].addEventListener('mouseover', function (event) {
-        var random = Math.floor(Math.random() *11);
-        if (random === 0) {
-            catSpeak();
-        } else if (random === 1) {
-            catSpeak();
-        } else if (random === 2) {
-            catSpeak();
-        } else if (random === 3) {
-            catSpeak();
-        } else if (random === 4) {
-            catSpeak();
-        } else if (random === 5) {
-            catSpeak();
-        } else if (random === 6) {
-            catSpeak();
-        } else if (random === 7) {
-            catSpeak();
-        } else if (random === 8) {
-            catSpeak();
-        } else if (random === 9) {
-            catSpeak();
-        } else if (random === 10) {
-            catSpeak();
-        }
-    })
+        catSpeak();
+    });
 }
 
 
