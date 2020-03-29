@@ -3,6 +3,10 @@ var choice = document.getElementById('yourChoice');
 var results = document.getElementById('results');
 var winner = document.getElementById('winner');
 
+var upperCase = (str) => {
+    return str.toUpperCase();
+};
+
 var randomNum = function () {
     var randomHand = Math.floor((Math.random() * 3));
     if (randomHand === 0) {
@@ -29,11 +33,11 @@ being clicked on.
 //TODO: You just need to figure out the logic to compare choice1 with choice2 and render it to page...
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) {
-        winner.innerHTML = `It's a tie, you chose ${choice1} and computer chose ${choice2}!`;
+        winner.innerHTML = `It's a tie, you chose ${upperCase(choice1)} and computer chose ${upperCase(choice2)}!`;
     } else if ((choice1 === 'rock' && choice2 === 'paper') || (choice1 === 'paper' && choice2 === 'scissors') || (choice1 === 'scissors' && choice2 === 'rock')) {
-            winner.innerHTML = `You lost, computer chose ${choice2} and you chose ${choice1}`;
+            winner.innerHTML = `You lost, computer chose ${upperCase(choice2)} and you chose ${upperCase(choice1)}`;
     } else if ((choice1 === 'paper' && choice2 === 'rock') || (choice1 === 'rock' && choice2 === 'scissors') || (choice1 === 'scissors' && choice2 === 'paper')) {
-        winner.innerHTML = `You win! You chose ${choice1} and the computer chose ${choice2}`;
+        winner.innerHTML = `You win! You chose ${upperCase(choice1)} and the computer chose ${upperCase(choice2)}`;
     }
 };
 
@@ -66,6 +70,7 @@ var scissors = function (event) {
  * also add feature where you can tally the wins and render on page until
  * new game or restart
  */
+
 
 
 
