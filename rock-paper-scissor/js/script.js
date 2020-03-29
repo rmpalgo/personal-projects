@@ -7,13 +7,13 @@ var randomNum = function () {
     var randomHand = Math.floor((Math.random() * 3));
     if (randomHand === 0) {
         results.innerHTML = 'rock';
-        compChoice = 0;
+        compChoice = 'rock';
     } else if (randomHand === 1) {
         results.innerHTML = 'paper';
-        compChoice = 1;
+        compChoice = 'paper';
     } else {
         results.innerHTML = 'scissors';
-        compChoice = 2;
+        compChoice = 'scissors';
     }
 }
 
@@ -29,14 +29,11 @@ being clicked on.
 //TODO: You just need to figure out the logic to compare choice1 with choice2 and render it to page...
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) {
-        winner.innerHTML = "It's a tie!";
-    } else if ((choice1 === 0 && choice2 === 1) || (choice1 === 1 && choice2 === 2) || (choice1 === 2 && choice2 === 0)) {
-        winner.innerHTML = 'Computer can read your mind, you lose!';
-    } else if ((choice1 === 1 && choice2 === 0) || (choice1 === 0 && choice2 === 2) || (choice1 === 2 && choice2 === 1)) {
-        winner.innerHTML = 'You alright, you win!';
-    } else {
-        //I am using this to find any conditionals that I might be missing.
-        winner.innerHTML = "I don't know what happened?";
+        winner.innerHTML = `It's a tie, you chose ${choice1} and computer chose ${choice2}!`;
+    } else if ((choice1 === 'rock' && choice2 === 'paper') || (choice1 === 'paper' && choice2 === 'scissors') || (choice1 === 'scissors' && choice2 === 'rock')) {
+            winner.innerHTML = `You lost, computer chose ${choice2} and you chose ${choice1}`;
+    } else if ((choice1 === 'paper' && choice2 === 'rock') || (choice1 === 'rock' && choice2 === 'scissors') || (choice1 === 'scissors' && choice2 === 'paper')) {
+        winner.innerHTML = `You win! You chose ${choice1} and the computer chose ${choice2}`;
     }
 };
 
@@ -44,7 +41,7 @@ var compare = function (choice1, choice2) {
 var rock = function (event) {
     randomNum();
     choice.innerHTML = 'rock';
-    var choice1 = 0;
+    var choice1 = 'rock';
     compare(choice1, compChoice);
 }
 
@@ -52,7 +49,7 @@ var rock = function (event) {
 var paper = function (event) {
     randomNum();
     choice.innerHTML = 'paper';
-    var choice1 = 1;
+    var choice1 = 'paper';
     compare(choice1, compChoice);
 }
 
@@ -60,7 +57,7 @@ var paper = function (event) {
 var scissors = function (event) {
     randomNum();
     choice.innerHTML = 'scissors';
-    var choice1 = 2;
+    var choice1 = 'scissors';
     compare(choice1, compChoice);
 }
 
