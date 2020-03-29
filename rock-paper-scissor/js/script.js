@@ -10,13 +10,13 @@ var upperCase = (str) => {
 var randomNum = function () {
     var randomHand = Math.floor((Math.random() * 3));
     if (randomHand === 0) {
-        results.innerHTML = 'rock';
+        results.innerHTML = '<em>rock</em>';
         compChoice = 'rock';
     } else if (randomHand === 1) {
-        results.innerHTML = 'paper';
+        results.innerHTML = '<em>paper</em>';
         compChoice = 'paper';
     } else {
-        results.innerHTML = 'scissors';
+        results.innerHTML = '<em>scissors</em>';
         compChoice = 'scissors';
     }
 }
@@ -33,18 +33,18 @@ being clicked on.
 //TODO: You just need to figure out the logic to compare choice1 with choice2 and render it to page...
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) {
-        winner.innerHTML = `It's a tie, you chose ${upperCase(choice1)} and computer chose ${upperCase(choice2)}!`;
+        winner.innerHTML = `It's a <strong id="tie">tie</strong>, you chose <em>${upperCase(choice1)}</em> and computer chose <em>${upperCase(choice2)}</em>!`;
     } else if ((choice1 === 'rock' && choice2 === 'paper') || (choice1 === 'paper' && choice2 === 'scissors') || (choice1 === 'scissors' && choice2 === 'rock')) {
-            winner.innerHTML = `You lost, computer chose ${upperCase(choice2)} and you chose ${upperCase(choice1)}`;
+            winner.innerHTML = `You <strong id="lost">lost</strong>, computer chose <em>${upperCase(choice2)}</em> and you chose <em>${upperCase(choice1)}</em>`;
     } else if ((choice1 === 'paper' && choice2 === 'rock') || (choice1 === 'rock' && choice2 === 'scissors') || (choice1 === 'scissors' && choice2 === 'paper')) {
-        winner.innerHTML = `You win! You chose ${upperCase(choice1)} and the computer chose ${upperCase(choice2)}`;
+        winner.innerHTML = `You <strong id="win">win</strong>! You chose <em>${upperCase(choice1)}</em> and the computer chose <em>${upperCase(choice2)}</em>`;
     }
 };
 
 //0
 var rock = function (event) {
     randomNum();
-    choice.innerHTML = 'rock';
+    choice.innerHTML = '<em> rock </em>';
     var choice1 = 'rock';
     compare(choice1, compChoice);
 }
@@ -52,7 +52,7 @@ var rock = function (event) {
 //1
 var paper = function (event) {
     randomNum();
-    choice.innerHTML = 'paper';
+    choice.innerHTML = '<em> paper </em>';
     var choice1 = 'paper';
     compare(choice1, compChoice);
 }
@@ -60,7 +60,7 @@ var paper = function (event) {
 //2
 var scissors = function (event) {
     randomNum();
-    choice.innerHTML = 'scissors';
+    choice.innerHTML = '<em>scissors</em>';
     var choice1 = 'scissors';
     compare(choice1, compChoice);
 }
