@@ -1,21 +1,18 @@
+//ES6
 class Sapien {
-    constructor() {
-        this.gender = 'male';
-    }
+    gender = 'male';
 
-    printGender() {
+    printGender = () => {
         console.log(this.gender);
     }
 }
 
 class Person extends Sapien {
-    constructor() {
-        super();
-        this.name = 'Max';
-        this.gender = 'female';
-    }
+        name = 'Max';
+        gender = 'female';
 
-    printMyName() {
+
+    printMyName = () => {
         console.log(this.name);
     }
 }
@@ -23,3 +20,6 @@ class Person extends Sapien {
 const p = new Person();
 p.printMyName();
 p.printGender();
+
+
+
