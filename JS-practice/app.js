@@ -42,3 +42,37 @@ const filter = (...args) => {
 }
 
 console.log(filter(1, 2, 3, 1, 2, 2, 1));
+
+//Destructuring
+const [a, ,b] = ['Bob', 'Neat', 'Cool'];
+console.log(a);
+console.log(b);
+
+const obj = {id: 1, userName: 'scooby', password: 'password'};
+const {id, userName, password} = obj;
+console.log(id);
+console.log(userName);
+console.log(password);
+
+
+//Copy values
+const num = 1;
+const num2 = num;
+console.log(num2);
+
+//Reference
+const person = {
+    name: 'Bob'
+};
+
+// const secondPerson = person;
+// person.name = 'Pierce';
+// console.log(secondPerson);
+console.log(person);
+
+const secondPerson = {
+    ...person
+}
+
+console.log(secondPerson);
+
