@@ -76,3 +76,11 @@ const secondPerson = {
 
 console.log(secondPerson);
 
+//Array function
+const numbers = [1, 2, 3];
+
+const doubleNumArray = numbers.map( (num) => {
+    return num * num;
+}) // return new array
+
+console.log(doubleNumArray);
